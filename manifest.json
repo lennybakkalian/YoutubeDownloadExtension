@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "YT-DL v3",
+  "version": "3.0.0",
+  "description": "Manage Youtube Videos with this Extension",
+    "background": {
+        "persistent":true,
+        "page":"background.html"
+    },
+    "content_scripts": [{
+            "matches": ["*://*.youtube.com/*"],
+            "js": ["app.js"]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "http://www.youtube.com/*"
+    ]
+}
